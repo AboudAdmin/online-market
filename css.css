@@ -1,0 +1,361 @@
+/* الخلفية */
+.box {
+  background-color: #112D4E;
+  background-color: #112D4E;
+  padding: 20px;
+  border: 1px solid #112D4E;
+  
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* توجيه العناصر إلى اليسار */
+}
+
+.box a {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #3160B6;
+  text-decoration: none;
+  
+  padding: 5px 10px;
+  margin-left: 2px; /* المسافة بين الروابط */
+  margin-right: 2px; /* المسافة بين الروابط */
+  border-radius: 40px;
+  transition: background-color 0.3s;
+}
+
+
+.box a:last-child {
+  margin-right: 0; /* لإلغاء المسافة اليمنى للروابط الأخيرة */
+}
+
+
+.box a:hover {
+  background-color: #DBE2EF;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row-reverse; /* تغيير اتجاه العناصر بالداخل */
+  align-items: center;
+  
+}
+
+
+.search-container {
+  display: grid;
+  grid-template-columns: 1fr auto; /* تعيين عرض الأعمدة، الأولى تأخذ النسبة الباقية، الثانية هي عرض الزر */
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 5px;
+  border-radius: 5px;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: black;
+  height: 30px;
+  font-size: 16px;
+  width: 100%; /* تعيين عرض الخانة ليمتد على العرض المتاح */
+}
+
+.search-button {
+  background-color: hsl(0, 100%, 51%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-link, .basket-link, .store-link {
+  display: inline-block;
+  margin-right: 10px; /* تعديل المسافة بين الروابط */
+  margin-left: auto; /* تحويل الروابط إلى اليسار */
+}
+
+@media (max-width: 767px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-link, .basket-link, .store-link {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+}
+.SERVICE-link.button {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #DBE2EF;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.box1 {
+  background-color: #FAF8F1;
+  padding: 20px;
+  border: 1px solid #FAF8F1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* توجيه العناصر إلى اليسار */
+}
+
+.box1 a {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #3160B6;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-left: 2px; /* المسافة بين الروابط */
+  margin-right: 2px; /* المسافة بين الروابط */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+
+.box1 a:last-child {
+  margin-right: 0; /* لإلغاء المسافة اليمنى للروابط الأخيرة */
+}
+
+
+.box1 a:hover {
+  background-color: rgb(255, 0, 0);
+}
+.menu-container {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 1;
+  width: 100%; /* عرض قائمة الأقسام */
+  max-width: 400px; /* حدد العرض الأقصى هنا */
+}
+
+.tous.produita:hover + .sub-menu,
+.sub-menu:hover {
+  display: block;
+  height: auto; /* إزالة الارتفاع الثابت */
+  overflow-y: auto; /* إضافة شريط التمرير العمودي للقائمة */
+}
+
+.sub-menu li {
+  position: relative;
+}
+
+.sub-menu li:hover > .sub-menu {
+  display: block;
+  top: 0;
+  left: 100%;
+  width: 100%; /* عرض قائمة الأقسام الفرعية */
+  max-width: 400px; /* حدد العرض الأقصى هنا */
+  height: auto; /* إزالة الارتفاع الثابت */
+  overflow-y: auto; /* إضافة شريط التمرير العمودي للقائمة الفرعية */
+}
+
+/* تأثير الانتقال */
+.tous.produita,
+.sub-menu li {
+  transition: transform 0.3s ease;
+}
+
+.tous.produita:hover,
+.sub-menu li:hover {
+  transform: scale(1.1);
+}
+
+/* تأثير الرسم المتحرك */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sub-menu {
+  animation: fadeIn 0.3s ease;
+}
+@media (max-width: 767px) {
+  .box {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-container {
+    width: auto;
+    margin-right: 10px;
+    margin-left: auto;
+  }
+
+  .login-link, .basket-link, .store-link {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 30px;
+    color: #3160B6;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #FAF8F1;
+    padding: 20px;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .side-menu.open {
+    transform: translateX(0);
+  }
+
+  .side-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #3160B6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .side-menu a:hover {
+    background-color: #DBE2EF;
+  }
+}
+.slideshow img:not(:first-child) {
+  display: none;
+}
+.emptiness{
+  background-color: #FFFFFF;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border: 1px solid #FFFFFF;
+  
+}
+.slideshow {
+  overflow: hidden; /* لإخفاء الصور الزائدة خارج الشريط */
+}
+
+.logos {
+  white-space: nowrap; /* لعرض الصور في سطر واحد ومنع الانتقال إلى سطر جديد */
+  animation: marquee 20s linear infinite; /* تعريف الحركة */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* بداية الحركة */
+  }
+  100% {
+    transform: translateX(-20%); /* نهاية الحركة */
+  }
+  100% {
+    transform: translateX(-20%); /* العودة إلى البداية */
+  }
+}
+.emptiness1 {
+  background-color: #ffffff;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+
+}
+.t3rif {
+  background-color: #112D4E;
+  background-color: #112D4E;
+  padding: 90px;
+ 
+  border-radius: 5px;
+  
+  
+}
+
+.social-media{
+  position: relative;
+  top: 20px; /* تحريك العنصر باتجاه الأعلى بمقدار 20 بكسل */
+  left: 30px; /* تحريك العنصر باتجاه اليسار بمقدار 30 بكسل */
+}
+
+
+
+.white-box {
+  background-color: white;
+  height: 200px;
+  width: 600px;
+  position: relative;
+  top: -60px;
+  left: 240px;
+  
+}
+.white-box {
+  display: flex; /* عرض عناصر الصور على شكل صف */
+}
+.box1 {
+  position: relative;
+}
+
+.btn-info {
+  display: none;
+  position: absolute;
+  top: 30px; /* تعديل الارتفاع حسب احتياجاتك */
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formatique:hover + .btn-info,
+.telephone-tablette:hover + .btn-info,
+.stockage:hover + .btn-info,
+.impression:hover + .btn-info,
+.tv-son-photos:hover + .btn-info,
+.electromenager:hover + .btn-info,
+.securite:hover + .btn-info,
+.bureautique:hover + .btn-info,
+.reseau-conectiques:hover + .btn-info {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
